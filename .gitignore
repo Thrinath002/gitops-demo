@@ -4,3 +4,4 @@
 .env
 *-key.json
 __pycache__/
+.instructions.md
