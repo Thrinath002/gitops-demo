@@ -25,3 +25,17 @@ module "network" {
 
   depends_on = [google_project_service.apis]
 }
+module "registry" {
+  source     = "../../../modules/registry"
+  project_id = var.project_id
+  region     = var.region
+
+  depends_on = [google_project_service.apis]
+}
+
+module "iam" {
+  source     = "../../../modules/iam"
+  project_id = var.project_id
+
+  depends_on = [google_project_service.apis]
+}
